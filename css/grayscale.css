@@ -43,12 +43,27 @@ footer {
 
 .image-large {
   position: relative;
-  width: 100%;
-  height: auto;
+  height: 90vh;
   min-height: 35rem;
-  padding: 15rem 0;
 }
 
+.remove-from-mobile {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .image-large {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+  }
+
+  .remove-from-mobile {
+    display: initial;
+  }
+}
 
 /* ************************************************* */
 /* Navigation */
@@ -56,8 +71,8 @@ footer {
 
 #mainNav {
   max-height: 70px;
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  background-color: white;
 }
 
 #mainNav .navbar-toggler {
@@ -78,7 +93,7 @@ footer {
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
+  color: fade(rgba(255, 255, 255, 0.014), 80%);
   outline: none;
 }
 
@@ -87,7 +102,21 @@ footer {
   outline: none;
 }
 
+.navbar-collapse {
+  width: 100vw;
+  background-color: white;
+  padding: 10px;
+}
+
+
 @media (min-width: 992px) {
+  .navbar-collapse {
+    width: 100vw;
+    background-color: white;
+    padding: 0;
+  }
+
+
   #mainNav {
     padding-top: 0;
     padding-bottom: 0;
@@ -142,17 +171,16 @@ footer {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-
+  border-bottom: 5px var(--accent) solid;
 }
 
 .main h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   color: rgb(255, 255, 255);
   background: rgba(0, 0, 0, 0.6);
 }
-
 
 
 @media (min-width: 768px) {
@@ -183,23 +211,23 @@ footer {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  border-bottom: 5px var(--accent) solid;
 }
 
 .about-me-desc {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
   border-radius: 10px;
   max-width: 45rem;
+  bottom: -50%;
 }
 
-.about-me-desc-right {
-  margin-left: auto;
-  margin-right: 2rem;
-}
-
-.about-me-desc-left {
-  margin-right: auto;
-  margin-left: 2rem;
+.about-pilates-desc {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 45rem;
+  bottom: -2%;
 }
 
 .about-pilates-section {
@@ -208,6 +236,8 @@ footer {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  border-bottom: 5px var(--accent) solid;
+  bottom: 50%;
 }
 
 .about-section p,
@@ -216,6 +246,14 @@ ul {
 }
 
 @media (min-width: 992px) {
+  .about-me-desc {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 45rem;
+    bottom: 0;
+  }
+
   .about-section {
     height: 100vh;
     padding-top: 5rem;
@@ -232,20 +270,26 @@ ul {
     font-size: 2.25rem;
     text-align: left;
   }
-}
 
+  .about-me-desc-right {
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
+  .about-me-desc-left {
+    margin-right: auto;
+    margin-left: 2rem;
+  }
+}
 
 .classes-section {
   text-align: center;
-  padding: 10rem 0;
-}
-
-.classes-section .featured-text {
-  padding: 2rem;
+  padding: 1rem 0;
+  border-bottom: 5px var(--accent) solid;
 }
 
 .classes-section .card {
-  min-height: 25rem;
+  margin-bottom: 5px;
 }
 
 .classes-section .card-title {
@@ -254,16 +298,30 @@ ul {
   padding-bottom: 15px;
 }
 
-.nutrition {
-  text-align: center;
-  margin-top: 5rem;
-}
-
 .nutrition .row {
   justify-content: center;
 }
 
 @media (min-width: 992px) {
+  .nutrition {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .classes-section {
+    text-align: center;
+    padding: 10rem 0;
+    border-bottom: 5px var(--accent) solid;
+  }
+
+  .classes-section .featured-text {
+    padding: 2rem;
+  }
+
+  .classes-section .card {
+    min-height: 25rem;
+  }
+
   .classes-section h5 {
     font-size: 1.7rem;
   }
