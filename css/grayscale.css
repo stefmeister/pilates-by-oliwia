@@ -290,6 +290,7 @@ ul {
 
 .classes-section .card {
   margin-bottom: 5px;
+  height: 99%
 }
 
 .classes-section .card-title {
@@ -301,6 +302,7 @@ ul {
 .nutrition .row {
   justify-content: center;
 }
+
 
 @media (min-width: 992px) {
   .nutrition {
@@ -331,7 +333,6 @@ ul {
   }
 
   .classes-section {
-    height: 100vh;
     padding-top: 5rem;
   }
 
@@ -340,43 +341,6 @@ ul {
     border-left: 0.5rem solid var(--accent);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .signup-section {
   padding: 10rem 0;
