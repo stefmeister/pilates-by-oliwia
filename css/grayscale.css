@@ -454,6 +454,8 @@ ul {
 .email {
   width: 100%;
   margin-bottom: 10px;
+  height: 50px;
+  margin-top: 10%;
 }
 
 #mc-embedded-subscribe-form input[type=checkbox] {
