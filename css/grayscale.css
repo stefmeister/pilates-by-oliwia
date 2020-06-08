@@ -41,9 +41,9 @@ footer {
   padding: 5rem 0;
 }
 
-.image-large {
+.image-large-mb {
   position: relative;
-  height: 90vh;
+  height: 91vh;
   min-height: 35rem;
 }
 
@@ -166,8 +166,8 @@ footer {
 /* ************************************************* */
 
 .main {
-  background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%), url("../img/main.jpg");
-  background-position: left;
+  background: url("../img/about_me.jpg");
+  background-position: -183px 0;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -193,6 +193,14 @@ footer {
 
 @media (min-width: 992px) {
   .main {
+    background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%), url("../img/main.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    border-bottom: 5px var(--accent) solid;
+  }
+
+  .main {
     height: 100vh;
     padding: 0;
   }
@@ -206,7 +214,7 @@ footer {
 
 
 .about-me-section {
-  background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%), url("../img/about_me.jpg");
+  background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -218,20 +226,20 @@ footer {
   background: rgba(0, 0, 0, 0.6);
   padding: 10px;
   border-radius: 10px;
-  max-width: 45rem;
-  bottom: -50%;
+  width: initial;
+  margin: 15px 5px 15px 5px;
 }
 
 .about-pilates-desc {
   background: rgba(0, 0, 0, 0.6);
   padding: 10px;
   border-radius: 10px;
-  max-width: 45rem;
-  bottom: -2%;
+  width: initial;
+  margin: 15px 5px 15px 5px;
 }
 
 .about-pilates-section {
-  background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%), url("../img/about_pilates.jpg");
+  background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -245,7 +253,42 @@ ul {
   color: white;
 }
 
+.desc-img-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.desc-img {
+  width: 98vw;
+  margin: 0 5px 0 5px;
+  border: 2px solid var(--accent);
+  border-radius: 5px;
+}
+
 @media (min-width: 992px) {
+  .remove-from-desktop {
+    display: none;
+  }
+
+  .about-me-section {
+    background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%), url("../img/about_me.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    border-bottom: 5px var(--accent) solid;
+  }
+
+  .about-pilates-section {
+    background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%), url("../img/about_pilates.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    border-bottom: 5px var(--accent) solid;
+    bottom: 50%;
+  }
+
   .about-me-desc {
     background: rgba(0, 0, 0, 0.4);
     padding: 2rem;
@@ -311,6 +354,7 @@ ul {
   }
 
   .classes-section {
+    background: linear-gradient(to bottom, rgba(253, 255, 243, 0), #0f0f0f59 100%);
     text-align: center;
     padding: 10rem 0;
     border-bottom: 5px var(--accent) solid;
@@ -404,4 +448,34 @@ ul {
 
 .contact-section .social a:active {
   color: #fff;
+}
+
+
+.email {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#mc-embedded-subscribe-form input[type=checkbox] {
+  display: inline;
+  width: auto;
+  margin-right: 10px;
+}
+
+#mergeRow-gdpr {
+  margin-top: 20px;
+}
+
+#mergeRow-gdpr fieldset label {
+  font-weight: normal;
+}
+
+#mc-embedded-subscribe-form .mc_fieldset {
+  border: none;
+  min-height: 0px;
+  padding-bottom: 0px;
+}
+
+.spec-outline {
+  border: 2px solid var(--accent);
 }
